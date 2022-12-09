@@ -1,0 +1,261 @@
+/* custom bootstrap css */
+
+/* variables */
+
+:root {
+    --dark: #333333;
+    --light: #fff;
+    --highlight: #74FBB5;
+    --hover: #fff;
+    --hover-span: orange;
+    --box-shadow: rgba(0, 0, 0, 0.8);
+    --bg-grey: #BCBEC3;
+    --peachy: #F3AEAC;
+    --peachier: #EA655D;
+    --purps: #A5ACF5;
+    --aqua: #74FBB5;
+    --lumi: #c0fa62;
+    --gradient: linear-gradient(45deg,
+            rgba(54, 54, 54, 0.8) 0%,
+            rgba(88, 88, 88, 0.7) 100%);
+    --gradient-light: linear-gradient(45deg,
+            rgba(158, 158, 158, 0.8) 0%,
+            rgba(255, 255, 255, 0.7) 100%);
+}
+
+body {
+    /* --bs-body-font-family: var(--bs-font-monospace);
+    --bs-body-line-height: 1.4; */
+    /* doc says no need to create new rules, just edit values? - but his doesn't work */
+    /* --bs-body-bg: var(--bs-gray-100); */
+    background-image: var(--gradient);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: var(--light);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+span:hover {
+    color: var(--hover-span);
+    cursor: pointer;
+}
+
+em {
+    color: var(--highlight);
+}
+
+/* this DOES work! */
+.custom-body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-grey);
+    /* gradient wont work!? */
+    /* background-color: var(--gradient); */
+}
+
+/* container */
+
+.container {
+    margin: 0 auto;
+}
+
+/* navbar */
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.custom-navbar-brand {
+    color: var(--light);
+    align-items: center;
+    animation: easeInOutLeft 2s;
+    /* margin-left: 1rem; */
+    /* border: 1px solid red; */
+}
+
+.custom-navbar-brand:hover {
+    color: var(--highlight);
+}
+
+/* brand text */
+
+.custom-navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+/* custom hamburger */
+.custom-toggler {
+    background-color: #333;
+    margin-right: .5rem;
+}
+
+/* custom hamburger */
+.hamburger {
+    color: var(--light);
+}
+
+.custom-nav-item {
+    color: var(--light);
+    margin-top: .7rem;
+    font-size: 1rem;
+}
+
+/* set color on items focus */
+/* .custom-nav-item:focus {
+    color: var(--highlight);
+} */
+
+.custom-nav-item:hover {
+    color: var(--highlight);
+}
+
+/* navbar animations */
+
+.nav-anim {
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: none;
+}
+
+.nav-right {
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+#links {
+    margin-right: 1rem;
+}
+
+/* header hero */
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(30vh - 25px);
+}
+
+.header-hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hero-anim squares */
+
+.bg-grid-container {
+    animation: fadeIn 15s;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 3px;
+    width: 100vw;
+    height: 250px;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    z-index: -1;
+}
+
+.bg-grid-container>* {
+    border: 1px solid black;
+}
+
+.grid-item {
+    width: 50px;
+    height: 30px;
+}
+
+#aqua {
+    background-color: var(--highlight);
+    animation: colourFade 1s ease alternate infinite;
+}
+
+#peach {
+    background-color: var(--peachy);
+    animation: colourFade 2s ease alternate infinite;
+}
+
+#purple {
+    background-color: var(--purps);
+    animation: colourFade 3s ease alternate infinite;
+}
+
+#lumi {
+    background-color: var(--lumi);
+    animation: colourFade 1s ease alternate infinite;
+}
+
+/* main */
+
+/* about section */
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body img {
+    justify-self: center;
+    text-align: center;
+}
+
+.card-subtitle {
+    margin-bottom: 1rem;
+}
+
+/* .sub-text {
+    color: var(--light);
+} */
+
+.custom-carousel img {
+    height: 400px;
+}
